@@ -36,6 +36,20 @@ typedef int Type_error;
 typedef int Syn_error;
 
 
+enum Priority
+    {
+    ADD_P = 1,
+    MUL_P = 2,
+    POW_P = 3,
+    };
+
+enum Order
+    {
+    PRE_ORDER = 0,
+    IN__ORDER = 1,
+    };
+
+
 const int MAX_VARIABLE_LEN = 10;
 
 const int MAX_COUNT_VARIABLE = 20;
@@ -44,6 +58,8 @@ const int MAX_TOKENS = 400;
 
 static FILE* graph_file = NULL;
 
+static FILE* tex_file = NULL;
+
 static FILE* logfile = NULL;
 
 const int MAX_COMMAND_LENGTH = 125;
@@ -51,6 +67,8 @@ const int MAX_COMMAND_LENGTH = 125;
 const int MAX_OP_LEN = 10;
 
 #define print(...) fprintf(graph_file, __VA_ARGS__)
+
+#define print_(...) fprintf(tex_file, __VA_ARGS__)
 
 #define SPECIFICATOR_TYPE "%s "
 
@@ -241,8 +259,41 @@ Node* GetG(Read* read);
 
 Node* CopyNode(Node* node);
 
-void InitRead(Read* read);
-
 void Lexer(Token** tokens, Text* data);
 
 int SkipSpaces(Text* data, size_t i);
+
+bool FindVariable(size_t* ind_param, char variable[MAX_VARIABLE_LEN]);
+
+bool IsZero(const double num);
+
+
+
+
+
+void TexDumpBegin();
+
+int TexDestroy();
+
+void TexDump(Node* node1, Node* node2, const char* phraze);
+
+const char* GetRandomPhraze();
+
+void DumpNode(Node* node, Node* main_node);
+
+
+const char* const PHRAZES[] =
+    {
+    "Поэтому в силу непрерывности функции \\\\ \n",
+    "В таком виде она может быть рассмотрена, как суперпозиция: \\\\ \n",
+    "Нетрудно видеть, что: \\\\ \n",
+    "Методом пристального взгляда получаем: \\\\ \n",
+    "Очевидно, что: \\\\ \n",
+    "Заметим, что: \\\\ \n",
+    "Теперь докажем теорему 4.17 из приложения 2.18 по определению 2.18.28: \\\\ \n",
+    "Необходимо сделать предостережение о неверном применении правила Лопиталя: \\\\ \n",
+    "Необходимые условия выпуклости: \\\\ \n"
+    };
+
+
+int CmpDouble(const double a, const double b);

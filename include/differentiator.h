@@ -5,27 +5,28 @@
 #include "tree.h"
 
 
-/*enum Changes
+enum Changes
     {
     NO_CHANGES =  0,
     HAS_CHANGES = 1,
-    };*/
+    };
 
 
-double Eval(Node* node);
+Tree_type Eval(Node* node);
 
-Node* Diff(Data data, Node* node);
+Node* Diff(Data data, Node* node, size_t ind_param);
 
-void Optimize(Tree* tree, Node* node);
+void Optimize(Tree* tree, Node** node);
 
-bool OptimizeConst(Tree* tree, Node* node, bool* has_optimized);
+bool OptimizeConst(Tree* tree, Node* node, Changes* change);
 
-Node* D_NUM();
+Node* D_NUM(double number); 
 
-Node* D_VAR();
+Tree_type OptimizeNeutrals(Tree* tree, Node** parent, Node* node, Changes* change);
 
-Node* FOR_DIV();
+void ReConnect(Node** parent, Node* node, Node* child);
 
-Node* TO_NEGATIVE();
+bool IsOne(const double num); 
 
+void GiveNum(Tree* tree, Node** node, const double num); 
 

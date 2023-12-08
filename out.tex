@@ -1,0 +1,37 @@
+\documentclass[a4paper,14pt]{extarticle}
+\usepackage{graphicx}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{multirow}
+\usepackage{mathtext}
+\usepackage[T2A]{fontenc}
+\usepackage{titlesec}
+\usepackage{float}
+\usepackage{empheq}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\title{\textbf{Лабораторная работа по взятию производной }}\author{Чурсин Владимир Б01-305}
+\begin{document}
+\maketitle
+\section{\ Функция \\}$\frac{\ln{(((x^2)+x))}}{(x+2)}$ \newline \\ 
+Заметим, что: \\ 
+
+$(x+2)' = 1+0$ \newline \\ 
+Необходимые условия выпуклости: \\ 
+
+$(x^2)' = (2*(x^1))*1$ \newline \\ 
+Необходимо сделать предостережение о неверном применении правила Лопиталя: \\ 
+
+$((x^2)+x)' = ((2*(x^1))*1)+1$ \newline \\ 
+Очевидно, что: \\ 
+
+$(\ln{(((x^2)+x))})' = \frac{1}{((x^2)+x)}*(((2*(x^1))*1)+1)$ \newline \\ 
+Необходимые условия выпуклости: \\ 
+
+$(\frac{\ln{(((x^2)+x))}}{(x+2)})' = \frac{(((\frac{1}{((x^2)+x)}*(((2*(x^1))*1)+1))*(x+2))-(\ln{(((x^2)+x))}*(1+0)))}{((x+2)^2)}$ \newline \\ 
+Итого имеем: \\
+$(\frac{\ln{(((x^2)+x))}}{(x+2)})' = \frac{(((\frac{1}{((x^2)+x)}*((2*x)+1))*(x+2))-\ln{(((x^2)+x))})}{((x+2)^2)}$ \newline \\ 
+
+
+\end{document}
