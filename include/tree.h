@@ -6,8 +6,18 @@
 #include <string.h>
 #include "stdarg.h"
 #include <assert.h>
-#include <ctype.h>
+#include "ctype.h"
 #include <math.h>
+#include <random>
+#include <time.h>
+
+
+
+#define PARENT node->parent
+#define LEFT node->left
+#define RIGHT node->right
+#define TYPE node->type
+#define DATA node->data
 
 
 #define CHECK_TREE_ERROR(tree)                           \
@@ -23,7 +33,7 @@
 
 #ifdef DUMP
     #define ON_DUMP(...) __VA_ARGS__
-    #define TreeDump(tree_ptr, node_ptr) TreeDumpFunction(tree_ptr, node_ptr, __FILE__, __PRETTY_FUNCTION__, __LINE__);
+    #define TreeDump(tree_ptr, node_ptr, Variables) TreeDumpFunction(tree_ptr, node_ptr, __FILE__, __PRETTY_FUNCTION__, __LINE__, Variables);
 
 #else
     #define ON_DUMP(...)
@@ -34,21 +44,6 @@ typedef double Tree_type;
 typedef int Type_error;
 
 typedef int Syn_error;
-
-
-enum Priority
-    {
-    ADD_P = 1,
-    MUL_P = 2,
-    POW_P = 3,
-    };
-
-enum Order
-    {
-    PRE_ORDER = 0,
-    IN__ORDER = 1,
-    };
-
 
 const int MAX_VARIABLE_LEN = 10;
 
@@ -223,19 +218,19 @@ Type_error TreeDtor(Tree* tree);
 
 Node* CreateNode(Data data, Types type, Node* left, Node* right);
 
-void TreeDumpFunction(Tree* tree, Node* node, const char* path, const char* signature, unsigned line); 
+void TreeDumpFunction(Tree* tree, Node* node, const char* path, const char* signature, unsigned line, char Variables[MAX_COUNT_VARIABLE][MAX_VARIABLE_LEN]); 
 
-void NodeDump(Node* node, size_t* number_of_node, Child child, const char* color);
+void NodeDump(Node* node, size_t* number_of_node, Child child, const char* color, char Variables[MAX_COUNT_VARIABLE][MAX_VARIABLE_LEN]); 
 
 void PrintGraphEdge(size_t from, size_t to, Child child, const char* color); 
 
-void PrintGraphNode(Node* node, size_t* number_of_node, Child child, const char* color); 
+void PrintGraphNode(Node* node, size_t* number_of_node, Child child, const char* color, char Variables[MAX_COUNT_VARIABLE][MAX_VARIABLE_LEN]);
 
 long long GetFileSize(FILE* file);
 
 void FileInput(FILE* file, Text* data);
 
-Type_error TreeRead(Tree* tree, Text* data, Read* read);
+Type_error TreeRead(Tree* tree, Text* data, Read* read, char Variables[MAX_COUNT_VARIABLE][MAX_VARIABLE_LEN]);
 
 Type_error CheckTreeLinks(Tree* tree, Node* node);
 
@@ -259,41 +254,12 @@ Node* GetG(Read* read);
 
 Node* CopyNode(Node* node);
 
-void Lexer(Token** tokens, Text* data);
+void Lexer(Token** tokens, Text* data, char Variables[MAX_COUNT_VARIABLE][MAX_VARIABLE_LEN]); 
 
 int SkipSpaces(Text* data, size_t i);
 
-bool FindVariable(size_t* ind_param, char variable[MAX_VARIABLE_LEN]);
+bool FindVariable(size_t* ind_param, char variable[MAX_VARIABLE_LEN], char Variables[MAX_COUNT_VARIABLE][MAX_VARIABLE_LEN]);
 
 bool IsZero(const double num);
-
-
-
-
-
-void TexDumpBegin();
-
-int TexDestroy();
-
-void TexDump(Node* node1, Node* node2, const char* phraze);
-
-const char* GetRandomPhraze();
-
-void DumpNode(Node* node, Node* main_node);
-
-
-const char* const PHRAZES[] =
-    {
-    "Поэтому в силу непрерывности функции \\\\ \n",
-    "В таком виде она может быть рассмотрена, как суперпозиция: \\\\ \n",
-    "Нетрудно видеть, что: \\\\ \n",
-    "Методом пристального взгляда получаем: \\\\ \n",
-    "Очевидно, что: \\\\ \n",
-    "Заметим, что: \\\\ \n",
-    "Теперь докажем теорему 4.17 из приложения 2.18 по определению 2.18.28: \\\\ \n",
-    "Необходимо сделать предостережение о неверном применении правила Лопиталя: \\\\ \n",
-    "Необходимые условия выпуклости: \\\\ \n"
-    };
-
 
 int CmpDouble(const double a, const double b);

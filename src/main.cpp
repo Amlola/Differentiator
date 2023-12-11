@@ -1,8 +1,10 @@
-#include "dsl.h"
+#include "include\\dsl.h"
 
 
 int main() 
     {
+    system("python graphic.py");
+
     Tree tree = {};
 
     TreeCtor(&tree);
@@ -13,14 +15,16 @@ int main()
 
     Read read = {};
 
-    FILE* file_input = fopen("input.txt", "r");
+    FILE* file_input = fopen("../input.txt", "r");
 
     FileInput(file_input, &data);
 
-    TreeRead(&tree, &data, &read);
-    
-    TreeDump(&tree, tree.root);
+    char Variables[MAX_COUNT_VARIABLE][MAX_VARIABLE_LEN] = {};
 
+    TreeRead(&tree, &data, &read, Variables);
+
+    Optimize(&tree, &tree.root);
+    
     char variable[MAX_VARIABLE_LEN] = {};
 
     size_t ind_param = 0;
@@ -29,34 +33,40 @@ int main()
 
     scanf("%s", &variable);
 
-    if (FindVariable(&ind_param, variable) == false) 
+    if (FindVariable(&ind_param, variable, Variables) == false) 
         {
         printf("there is no such variable in your example\n");
         }
 
-    else 
+    else
         {
+        srand(time(NULL));
+        
         Tree diff_tree = {};
 
         TreeCtor(&diff_tree);
 
         TexDumpBegin();
 
-        TexDump(tree.root, tree.root, "\\ Функция \\\\");
+        TexDump(tree.root, tree.root, "\\ Производная Функции \\\\", variable, false, Variables);
 
-        print_("\\section{Решение}");
-
-        diff_tree.root = Diff(type, tree.root, ind_param);
-
-        TreeDump(&tree, diff_tree.root);
+        diff_tree.root = Diff(&tree, type, tree.root, ind_param, Variables, true);
 
         Optimize(&tree, &diff_tree.root);
 
-        TexDump(tree.root, diff_tree.root, "Итого имеем: \\\\");
+        TexDump(tree.root, diff_tree.root, "В результате получаем: \\\\", variable, true, Variables);
+
+        Tree_type x_dot = 0;
+
+        printf("In which premises do you want to obtain Taylor's permission?\n");
+
+        scanf("%lf", &x_dot);
+
+        GetTaylor(type, &tree, tree.root, x_dot, ind_param, Variables, variable);
 
         TexDestroy();
 
-        TreeDump(&tree, diff_tree.root);
+        TreeDtor(&diff_tree);
         }
     
     TreeDtor(&tree);

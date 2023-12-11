@@ -1,16 +1,16 @@
 all: Diff
 
-Diff: main.o tree.o differentiator.o
-	g++ -g -DDUMP -o Diff.exe main.o tree.o differentiator.o
+Diff: src/main.o src/tree.o src/differentiator.o
+	g++ -g -DDUMP -o Diff.exe src/main.o src/tree.o src/differentiator.o
 
-main.o: main.cpp
-	g++ -g -DDUMP -c main.cpp
+main.o: src/main.cpp
+	g++ -g -DDUMP -c src/main.cpp
 
-tree.o: tree.cpp
-	g++ -g -DDUMP -c tree.cpp
+tree.o: src/tree.cpp
+	g++ -g -DDUMP -c src/tree.cpp
 
-differentiator.o: differentiator.cpp
-	g++ -g -DDUMP -c differentiator.cpp
+differentiator.o: src/differentiator.cpp
+	g++ -g -DDUMP -c src/differentiator.cpp
 
 clean:
 	rm *.o Diff.exe

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.12.7)  8 DEC 2023 18:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.12.7)  11 DEC 2023 17:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -11,8 +11,7 @@ L3 programming layer <2023-08-29>
 Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
 (C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/extsizes\size14.clo
 File: size14.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
-)
-(C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/base\exscale.sty
+) (C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/base\exscale.sty
 Package: exscale 2018/09/24 v2.1i Standard LaTeX package exscale
 LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 57.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
@@ -32,17 +31,13 @@ LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen141
-)
-(C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+) (C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
-
 (C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
-)
-(C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+) (C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
-
 (C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 )
@@ -71,20 +66,16 @@ File: uni-global.def 2022/08/07 UCS: Unicode global data
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks21
 \inpenc@posthook=\toks22
-
 (C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/ucs\utf8x.def
 File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
-))
-(C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+)) (C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2023/09/29 v3.95 The Babel package
 \babel@savecnt=\count194
 \U@D=\dimen144
 \l@unhyphenated=\language79
-
 (C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count195
-
 *************************************
 * Local config file bblopts.cfg used
 *
@@ -96,7 +87,6 @@ File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
 ldf
 File: russianb.ldf 2021/01/10 1.3m Russian support for the Babel system
 Language: russian 2020/09/09 1.3k Russian support for the Babel system
-
 
 Package babel Warning: No Cyrillic font encoding has been loaded so far.
 (babel)                A font encoding should be declared before babel.
@@ -113,27 +103,23 @@ Package babel Info: Default for \cyrdash is provided on input line 163.
 -russian.tex
 Package babel Info: Importing font and identification data for russian
 (babel)             from babel-ru.ini. Reported on input line 11.
-)
-(C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+) (C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip50
 \multirow@cntb=\count196
 \multirow@dima=\skip51
 \bigstrutjot=\dimen145
-)
-(C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/t2\mathtext.sty
+) (C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/t2\mathtext.sty
 Package: mathtext 2018/04/13 v1.1 transparent text-and-math defs
 LaTeX Info: Redefining \halign on input line 119.
-)
-(C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+) (C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 1
 12.
-
 (C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/cyrillic\t2acmr.fd
 File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-))
-(C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
+)) (C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.st
+y
 Package: titlesec 2023/10/27 v2.16 Sectioning titles
 \ttl@box=\box51
 \beforetitleunit=\skip52
@@ -144,18 +130,15 @@ Package: titlesec 2023/10/27 v2.16 Sectioning titles
 \titlewidth=\dimen148
 \titlewidthlast=\dimen149
 \titlewidthfirst=\dimen150
-)
-(C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+) (C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count197
 \float@exts=\toks24
 \float@box=\box52
 \@float@everytoks=\toks25
 \@floatcapt=\box53
-)
-(C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\empheq.sty
+) (C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\empheq.sty
 Package: empheq 2017/03/31 v2.15 Emphasizing equations
-
 (C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
@@ -173,25 +156,20 @@ LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count266
 \calc@Cskip=\skip56
-)
-(C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+) (C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2023/05/13 v2.17o AMS math features
 \@mathmargin=\skip57
-
 For additional information on amsmath, use the `?' option.
 (C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
-
 (C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks26
 \ex@=\dimen153
-))
-(C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+)) (C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen154
-)
-(C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+) (C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count267
@@ -272,8 +250,7 @@ LaTeX Info: Redefining \] on input line 2954.
 \EQ_mathdisplay_box=\box57
 \EQ_tag_box=\box58
 \g_EQ_temprow_int=\count283
-)
-(C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+) (C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup6
 \symAMSb=\mathgroup7
@@ -335,13 +312,11 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 LaTeX Info: Redefining \th on input line 15.
 \Hy@linkcounter=\count291
-
 (C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/ucs/data\uni-4.def
 File: uni-4.def 2022/08/07 UCS: Unicode data U+0400..U+04FF
 )
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 1
 6.
-
 (C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
 File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
@@ -377,7 +352,6 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 16.
 
-
 (C:\Users\mnmnm\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -390,12 +364,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/up' in size <14.4> not available
 LaTeX Font Info:    Font shape `OMS/cmr/m/up' in size <7> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 17.
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--19
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--19
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
@@ -405,90 +374,93 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--22
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--22
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--25
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--25
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--28
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--28
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--31
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--31
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
 [1
 
 {C:/Users/mnmnm/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 32--35
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--35
+Underfull \hbox (badness 10000) in paragraph at lines 31--33
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--35
+Underfull \hbox (badness 10000) in paragraph at lines 31--33
 
  []
 
-[2] (out.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 41--43
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--43
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+
+ []
+
+<plot.png, id=18, 462.528pt x 346.896pt>
+File: plot.png Graphic file (type png)
+<use plot.png>
+Package pdftex.def Info: plot.png  used on input line 51.
+(pdftex.def)             Requested size: 370.02289pt x 277.51717pt.
+[3] [4 <./plot.png>] (out.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
 
-
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 6216 strings out of 475247
- 100236 string characters out of 5757792
- 1921785 words of memory out of 5000000
- 27660 multiletter control sequences out of 15000+600000
- 568625 words of font info for 65 fonts, out of 8000000 for 9000
+ 6228 strings out of 475247
+ 100419 string characters out of 5757792
+ 1922785 words of memory out of 5000000
+ 27671 multiletter control sequences out of 15000+600000
+ 569445 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,6n,93p,333b,738s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\mnmnm\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm14
 40.pk> <C:\Users\mnmnm\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\la
-bx2074.pk> <C:\Users\mnmnm\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi60
-0\larm1728.pk> <C:\Users\mnmnm\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/d
-pi600\labx2488.pk><C:/Users/mnmnm/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmmi10.pfb><C:/Users/mnmnm/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/mnmnm/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/mnmnm/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mnmnm/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mnmnm/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/mn
-mnm/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on out.pdf (2 pages, 102355 bytes).
+bx1728.pk> <C:\Users\mnmnm\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi60
+0\labx2074.pk> <C:\Users\mnmnm\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/d
+pi600\larm1728.pk> <C:\Users\mnmnm\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t
+2a/dpi600\labx2488.pk><C:/Users/mnmnm/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmex10.pfb><C:/Users/mnmnm/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/mnmnm/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mnmnm/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mnmnm/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on out.pdf (4 pages, 175348 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
+ 187 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

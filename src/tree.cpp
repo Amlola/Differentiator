@@ -1,11 +1,6 @@
-#include "tree.h"
-
-#include <random>
-#include <time.h>
+#include "include\\tree.h"
 
 
-
-char Variable[MAX_COUNT_VARIABLE][MAX_VARIABLE_LEN] = {};
 
 
 void TreeCtor(Tree* tree)
@@ -280,11 +275,11 @@ Type_error ParseOperation(Text* data, size_t* i, Operations* type)
     }
 
 
-Type_error TreeRead(Tree* tree, Text* data, Read* read)
+Type_error TreeRead(Tree* tree, Text* data, Read* read, char Variables[MAX_COUNT_VARIABLE][MAX_VARIABLE_LEN])
     {
     Token* tokens = (Token*)calloc(MAX_TOKENS, sizeof(Token));
 
-    Lexer(&tokens, data);
+    Lexer(&tokens, data, Variables);
 
     read->str = tokens;
 
@@ -295,7 +290,7 @@ Type_error TreeRead(Tree* tree, Text* data, Read* read)
 
 
 
-void Lexer(Token** tokens, Text* data) 
+void Lexer(Token** tokens, Text* data, char Variables[MAX_COUNT_VARIABLE][MAX_VARIABLE_LEN]) 
     { 
     size_t i = 0;
 
@@ -363,10 +358,10 @@ void Lexer(Token** tokens, Text* data)
 
                 while (isalpha(data->Buf[i]))
                     {
-                    Variable[p][ind++] = data->Buf[i++];
+                    Variables[p][ind++] = data->Buf[i++];
                     }
 
-                Variable[p][ind] = '\0'; 
+                Variables[p][ind] = '\0'; 
 
                 if (p == 0) 
                     {
@@ -377,7 +372,7 @@ void Lexer(Token** tokens, Text* data)
 
                 else 
                     {
-                    if (strcmp(Variable[p], Variable[p - 1]) == 0)
+                    if (strcmp(Variables[p], Variables[p - 1]) == 0)
                         (*tokens)[count_token].data.ind_var_arr = p - 1;
 
                     else 
@@ -402,11 +397,11 @@ void Lexer(Token** tokens, Text* data)
 
 
 
-bool FindVariable(size_t* ind_param, char variable[MAX_VARIABLE_LEN]) 
+bool FindVariable(size_t* ind_param, char variable[MAX_VARIABLE_LEN], char Variables[MAX_COUNT_VARIABLE][MAX_VARIABLE_LEN]) 
     {
-    for (size_t i = 0; i < sizeof(Variable) / sizeof(Variable[0][0]); i++) 
+    for (size_t i = 0; i < sizeof(Variables) / sizeof(Variables[0][0]); i++) 
         {
-        if (strcmp(variable, Variable[i]) == 0) 
+        if (strcmp(variable, Variables[i]) == 0) 
             {
             *ind_param = i;
 
@@ -419,39 +414,38 @@ bool FindVariable(size_t* ind_param, char variable[MAX_VARIABLE_LEN])
 
 
 
-
 Node* CopyNode(Node* node)
     {
     Node* new_node = (Node*)calloc(1, sizeof(Node));
 
-    new_node->type = node->type;
+    new_node->type = TYPE;
 
-    switch (node->type)
+    switch (TYPE)
         {
         case NUM:
             {
-            new_node->data.num = node->data.num;
+            new_node->data.num = DATA.num;
             break;
             }
 
         case OP:
             {
-            new_node->data.op = node->data.op;
+            new_node->data.op = DATA.op;
             break;
             }    
 
         case VAR:
             {
-            new_node->data.ind_var_arr = node->data.ind_var_arr;
+            new_node->data.ind_var_arr = DATA.ind_var_arr;
             break;
             }
         }
 
-    if (node->left)
-        new_node->left  = CopyNode(node->left);
+    if (LEFT)
+        new_node->left  = CopyNode(LEFT);
     
-    if (node->right)
-        new_node->right = CopyNode(node->right);
+    if (RIGHT)
+        new_node->right = CopyNode(RIGHT);
 
     return new_node;
     }
@@ -465,21 +459,21 @@ Type_error TreeDelete(Tree* tree, Node* node)
         return NODE_PTR_IS_NULL;
         }
 
-    if (node->left) 
+    if (LEFT) 
         {
-        TreeDelete(tree, node->left);
+        TreeDelete(tree, LEFT);
         }
 
-    if (node->right) 
+    if (RIGHT) 
         {
-        TreeDelete(tree, node->right);
+        TreeDelete(tree, RIGHT);
         }
 
-    node->right  = nullptr;
+    RIGHT  = nullptr;
 
-    node->left   = nullptr;
+    LEFT   = nullptr;
 
-    node->parent = nullptr;
+    PARENT = nullptr;
 
     free(node);  
  
@@ -512,18 +506,18 @@ Type_error TreeDtor(Tree* tree)
 
 Type_error CheckTreeLinks(Tree* tree, Node* node)
     {    
-    if (node->left != nullptr && node->right != nullptr && (node->left->parent != node || node->right->parent != node))
+    if (LEFT != nullptr && RIGHT != nullptr && (LEFT->parent != node || RIGHT->parent != node))
         {
         tree->status |= TREE_LINKING_ERROR;
 
         return TREE_LINKING_ERROR;
         }
 
-    if (node->left != nullptr)
-        CheckTreeLinks(tree, node->left);
+    if (LEFT != nullptr)
+        CheckTreeLinks(tree, LEFT);
     
-    if (node->right != nullptr)
-        CheckTreeLinks(tree, node->right);
+    if (RIGHT != nullptr)
+        CheckTreeLinks(tree, RIGHT);
 
     return TREE_OK;
     }
@@ -556,24 +550,24 @@ bool TreeVerify(Tree* tree)
     }
 
 
-void NodeDump(Node* node, size_t* number_of_node, Child child, const char* color) 
+void NodeDump(Node* node, size_t* number_of_node, Child child, const char* color, char Variables[MAX_COUNT_VARIABLE][MAX_VARIABLE_LEN]) 
     {
-    PrintGraphNode(node, number_of_node, child, color);
+    PrintGraphNode(node, number_of_node, child, color, Variables);
 
     size_t current_number_of_node = *number_of_node;
 
-    if (node->left)
+    if (LEFT)
         {
         PrintGraphEdge(current_number_of_node, ++(*number_of_node), L_CHILD, "lime");
 
-        NodeDump(node->left, number_of_node, L_CHILD, "lime");
+        NodeDump(LEFT, number_of_node, L_CHILD, "lime", Variables);
         }
 
-    if (node->right)
+    if (RIGHT)
         {
         PrintGraphEdge(current_number_of_node, ++(*number_of_node), R_CHILD, "aqua");
 
-        NodeDump(node->right, number_of_node, R_CHILD, "aqua");
+        NodeDump(RIGHT, number_of_node, R_CHILD, "aqua", Variables);
         } 
     }
 
@@ -584,29 +578,29 @@ void PrintGraphEdge(size_t from, size_t to, Child child, const char* color)
     }
 
 
-void PrintGraphNode(Node* node, size_t* number_of_node, Child child, const char* color) 
+void PrintGraphNode(Node* node, size_t* number_of_node, Child child, const char* color, char Variables[MAX_COUNT_VARIABLE][MAX_VARIABLE_LEN]) 
     {
-    if (node->type == OP)
+    if (TYPE == OP)
         print("node%d[shape=record, style=filled, fillcolor=\"%s\", label=\" {ADDRESS: %p | DATA: %s | PARENT: %p | LEFT: %p | RIGHT: %p}\"];\n", 
-                                              *number_of_node, color, node, OperationArray[node->data.op - 1].op_char_name, node->parent, node->left, node->right);
+                                              *number_of_node, color, node, OperationArray[DATA.op - 1].op_char_name, PARENT, LEFT, RIGHT);
 
-    else if (node->type == NUM) 
+    else if (TYPE == NUM) 
         {
         print("node%d[shape=record, style=filled, fillcolor=\"%s\", label=\" {ADDRESS: %p | DATA: %lf | PARENT: %p | LEFT: %p | RIGHT: %p}\"];\n", 
-                                              *number_of_node, color, node, node->data.num, node->parent, node->left, node->right);  
+                                              *number_of_node, color, node, DATA.num, PARENT, LEFT, RIGHT);  
         }
 
-    else if (node->type == VAR) 
+    else if (TYPE == VAR) 
         {
         print("node%d[shape=record, style=filled, fillcolor=\"%s\", label=\" {ADDRESS: %p | DATA: %s | PARENT: %p | LEFT: %p | RIGHT: %p}\"];\n", 
-                                              *number_of_node, color, node, Variable[node->data.ind_var_arr], node->parent, node->left, node->right);  
+                                              *number_of_node, color, node, Variables[DATA.ind_var_arr], PARENT, LEFT, RIGHT);  
         }
     }
 
 
 
 
-void TreeDumpFunction(Tree* tree, Node* node, const char* path, const char* signature, unsigned line) 
+void TreeDumpFunction(Tree* tree, Node* node, const char* path, const char* signature, unsigned line, char Variables[MAX_COUNT_VARIABLE][MAX_VARIABLE_LEN]) 
     {
     logfile = fopen("logfile.html", "a");
 
@@ -641,7 +635,7 @@ void TreeDumpFunction(Tree* tree, Node* node, const char* path, const char* sign
 
         print("label = \"tree_dump from function %s, Tree/%s:%d\";\n", signature, path, line);
 
-        NodeDump(node, &number_of_node, L_CHILD, "red");
+        NodeDump(node, &number_of_node, L_CHILD, "red", Variables);
 
         print("\n\n}");
 
@@ -704,156 +698,4 @@ int SkipSpaces(Text* data, size_t i)
         }
     
     return i;
-    }
-
-
-
-void TexDump(Node* node1, Node* node2, const char* phraze)
-    {
-    if (node1 == node2) 
-        {
-        print_("\\section{%s}", phraze);
-
-        print_("$");
-
-        DumpNode(node1, node1);
-
-        print_("$ \\newline \\\\ \n");
-        }
-    
-    else 
-        {
-        print_("%s\n", phraze);
-
-        print_("$");
-
-        print_("(");
-
-        DumpNode(node1, node1);
-
-        print_(")' = ");
-
-        DumpNode(node2, node2);
-
-        print_("$ \\newline \\\\ \n");
-        }
-
-    }
-
-
-
-void DumpNode(Node* node, Node* root)
-    {
-    if (!node) return;
-
-    if (node->type == NUM)
-        {
-        if (CmpDouble(node->data.num, 0) < 0) 
-            print_("(");
-
-        if (CmpDouble((int)node->data.num, node->data.num) == 0) 
-            {
-            print_("%d", (int)node->data.num);
-            }
-
-        else 
-            print_("%lf", node->data.num);
-
-        if (CmpDouble(node->data.num, 0) < 0) 
-            print_(")");
-        }
-
-    if (node->type == VAR) 
-        print_("%s", Variable[node->data.ind_var_arr]);
-
-    if (node->type == OP)
-        {
-        if (node->data.op == SIN || node->data.op == COS || node->data.op == LN || node->data.op == CTG || node->data.op == TG)
-            {
-            print_("\\%s{(", OperationArray[node->data.op - 1].op_char_name);
-
-            DumpNode (node->right, root);
-
-            print_(")}");
-            }
-
-        else if (node->data.op == DIV) 
-            {
-            print_ ("\\frac{");
-
-            DumpNode(node->left, root);
-
-            print_ ("}{");
-
-            DumpNode(node->right, root);
-
-            print_ ("}");   
-            }
-
-        else 
-            {
-            if (node != root) print_("(");
-
-            DumpNode (node->left, root);
-
-            print_ ("%s", OperationArray[node->data.op - 1].op_char_name);
-
-            DumpNode (node->right, root);
-
-            if (node != root) print_(")");
-            }
-        }
-    }
-
-
-
-const char* GetRandomPhraze()
-    {
-    tm time = {};
-    size_t phraze_num = (size_t)(rand() % (sizeof(PHRAZES) / sizeof(const char*)));
-    return PHRAZES[phraze_num];
-    }
-
-
-void TexDumpBegin()
-    {
-    tex_file = fopen("out.tex", "w");
-
-    print_( "\\documentclass[a4paper,14pt]{extarticle}\n"
-                      "\\usepackage{graphicx}\n"
-                      "\\usepackage{ucs}\n"
-                      "\\usepackage[utf8x]{inputenc}\n"
-                      "\\usepackage[russian]{babel}\n"
-                      "\\usepackage{multirow}\n"
-                      "\\usepackage{mathtext}\n"
-                      "\\usepackage[T2A]{fontenc}\n"
-                      "\\usepackage{titlesec}\n"
-                      "\\usepackage{float}\n"
-                      "\\usepackage{empheq}\n"
-                      "\\usepackage{amsfonts}\n"
-                      "\\usepackage{amsmath}\n"
-                      "\\title{\\textbf{Лабораторная работа по взятию производной }}"
-                      "\\author{Чурсин Владимир Б01-305}\n"
-                      "\\begin{document}\n"
-                      "\\maketitle\n");
-    }
-
-
-int TexDestroy()
-    {
-    print_("\n");
-
-    print_("\n");
-
-    print_("\\end{document}");
-
-    fclose(tex_file);
-
-    tex_file = nullptr;
-
-    system("pdflatex out.tex");
-
-    // -interaction=batchmode 
-
-    return 0;
     }
