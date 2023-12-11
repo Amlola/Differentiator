@@ -1,8 +1,16 @@
 digraph struct {bgcolor=RosyBrown rankdir = HR
 
 
-label = "tree_dump from function void GetNDerivate(Data, Tree*, Node*, int, Tree_type, size_t, char (*)[10], char*), Tree/differentiator.cpp:202";
-node0[shape=record, style=filled, fillcolor="red", label=" {ADDRESS: 00B211F0 | DATA: 2.000000 | PARENT: 00000000 | LEFT: 00000000 | RIGHT: 00000000}"];
+label = "tree_dump from function int main(), Tree/src/main.cpp:61";
+node0[shape=record, style=filled, fillcolor="red", label=" {ADDRESS: 00690E40 | DATA: + | PARENT: 00000000 | LEFT: 00690F08 | RIGHT: 00690F30}"];
+node0->node1 [color = "lime"];
+node1[shape=record, style=filled, fillcolor="lime", label=" {ADDRESS: 00690F08 | DATA: * | PARENT: 00690E40 | LEFT: 00690EE0 | RIGHT: 00690E90}"];
+node1->node2 [color = "lime"];
+node2[shape=record, style=filled, fillcolor="lime", label=" {ADDRESS: 00690EE0 | DATA: 2.000000 | PARENT: 00690F08 | LEFT: 00000000 | RIGHT: 00000000}"];
+node1->node3 [color = "aqua"];
+node3[shape=record, style=filled, fillcolor="aqua", label=" {ADDRESS: 00690E90 | DATA: x | PARENT: 00690EB8 | LEFT: 00000000 | RIGHT: 00000000}"];
+node0->node4 [color = "aqua"];
+node4[shape=record, style=filled, fillcolor="aqua", label=" {ADDRESS: 00690F30 | DATA: 2.000000 | PARENT: 00690E40 | LEFT: 00000000 | RIGHT: 00000000}"];
 
 
 }

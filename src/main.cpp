@@ -1,9 +1,9 @@
-#include "include\\dsl.h"
+#include "../include/dsl.h"
 
 
 int main() 
     {
-    system("python graphic.py");
+    system("python ../graphic.py");
 
     Tree tree = {};
 
@@ -15,7 +15,7 @@ int main()
 
     Read read = {};
 
-    FILE* file_input = fopen("../input.txt", "r");
+    FILE* file_input = fopen("input.txt", "r");
 
     FileInput(file_input, &data);
 
@@ -40,6 +40,8 @@ int main()
 
     else
         {
+        TreeDump(&tree, tree.root, Variables);
+
         srand(time(NULL));
         
         Tree diff_tree = {};
@@ -52,7 +54,11 @@ int main()
 
         diff_tree.root = Diff(&tree, type, tree.root, ind_param, Variables, true);
 
+        TreeDump(&diff_tree, diff_tree.root, Variables);
+
         Optimize(&tree, &diff_tree.root);
+
+        TreeDump(&diff_tree, diff_tree.root, Variables);
 
         TexDump(tree.root, diff_tree.root, "В результате получаем: \\\\", variable, true, Variables);
 
