@@ -66,6 +66,11 @@ Node* GetG(Read* read)
 
     printf("END INDEX: %d\n", read->index);
 
+    if (read->str[read->index].data.op != END) 
+        {
+        printf("Syntax Error. Index: %d\n", read->index);
+        }
+
 	return val;
     }
 
@@ -281,9 +286,12 @@ Type_error TreeRead(Tree* tree, Text* data, Read* read, char Variables[MAX_COUNT
 
     Lexer(&tokens, data, Variables);
 
-    read->str = tokens;
+    if (tokens)
+        {
+        read->str = tokens;
 
-    tree->root = GetG(read);
+        tree->root = GetG(read);
+        }
     
     return tree->status;
     }
@@ -298,6 +306,10 @@ void Lexer(Token** tokens, Text* data, char Variables[MAX_COUNT_VARIABLE][MAX_VA
 
     i = SkipSpaces(data, i);
 
+    size_t count_left_brackets  = 0;
+
+    size_t count_right_brackets = 0;
+
     size_t p = 0;
 
     while (data->Buf[i] != '\0') 
@@ -311,6 +323,8 @@ void Lexer(Token** tokens, Text* data, char Variables[MAX_COUNT_VARIABLE][MAX_VA
             (*tokens)[count_token].data.op = OPEN_BRACKET;
 
             i++;
+
+            count_left_brackets++;
             }
 
         else if (data->Buf[i] == ')') 
@@ -320,6 +334,8 @@ void Lexer(Token** tokens, Text* data, char Variables[MAX_COUNT_VARIABLE][MAX_VA
             (*tokens)[count_token].data.op = CLOSE_BRACKET;
 
             i++;
+
+            count_right_brackets++;
             }
 
         else if (isdigit(data->Buf[i])) 
@@ -388,11 +404,20 @@ void Lexer(Token** tokens, Text* data, char Variables[MAX_COUNT_VARIABLE][MAX_VA
         count_token++;
         }
 
-    printf("COUNT TOKEN: %d\n", count_token);
-    
-    (*tokens)[count_token].type = OP;
+    if (count_left_brackets != count_right_brackets)
+        {
+        printf("Your example is uncorrect\n");
+        *tokens = nullptr;
+        }
 
-    (*tokens)[count_token].data.op = END;
+    else 
+        {
+        printf("COUNT TOKEN: %d\n", count_token);
+        
+        (*tokens)[count_token].type = OP;
+
+        (*tokens)[count_token].data.op = END;
+        } 
     }
 
 
@@ -660,21 +685,6 @@ void TreeDumpFunction(Tree* tree, Node* node, const char* path, const char* sign
     }
 
 
-long long GetFileSize(FILE* file)
-    {
-    assert(file);
-
-    long long start = ftell(file);
-    fseek(file, start, SEEK_END);
-
-    long long bufsize = ftell(file);
-    fseek(file, 0, SEEK_SET);
-
-    return bufsize;
-    }
-
-
-
 void FileInput(FILE* file, Text* data)
     {
     data->BufSize = GetFileSize(file);
@@ -689,7 +699,6 @@ void FileInput(FILE* file, Text* data)
     }
 
 
-
 int SkipSpaces(Text* data, size_t i) 
     {
     while (isspace(data->Buf[i])) 
@@ -698,4 +707,18 @@ int SkipSpaces(Text* data, size_t i)
         }
     
     return i;
+    }
+
+
+long long GetFileSize(FILE* file)
+    {
+    assert(file);
+
+    long long start = ftell(file);
+    fseek(file, start, SEEK_END);
+
+    long long bufsize = ftell(file);
+    fseek(file, 0, SEEK_SET);
+
+    return bufsize;
     }

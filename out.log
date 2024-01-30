@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.12.7)  11 DEC 2023 20:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.12.7)  30 JAN 2024 03:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -368,6 +368,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
+! Missing } inserted.
+<inserted text> 
+                }
+l.20 ...} \right)' = \sin{x} \cdot \left({-1\right
+                                                  })$\end{center}\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing delimiter (. inserted).
+<to be read again> 
+                   }
+l.20 ... \right)' = \sin{x} \cdot \left({-1\right}
+                                                  )$\end{center}\
+I was expecting to see something like `(' or `\{' or
+`\}' here. If you typed, e.g., `{' instead of `\{', you
+should probably delete the `{' by typing `1' now, so that
+braces don't get unbalanced. Otherwise just proceed.
+Acceptable delimiters are characters whose \delcode is
+nonnegative, or you can use `\delimiter <delimiter code>'.
+
+! Extra }, or forgotten $.
+<recently read> }
+                 
+l.20 ... \right)' = \sin{x} \cdot \left({-1\right}
+                                                  )$\end{center}\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 20--22
 
@@ -379,63 +413,460 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--25
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
+Underfull \hbox (badness 10000) in paragraph at lines 26--28
 
  []
 
 [1
 
 {C:/Users/mnmnm/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
+Underfull \hbox (badness 10000) in paragraph at lines 29--31
+
+ []
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.32 ...cdot \cos{x}+\sin{x} \cdot \left({-1\right
+                                                  })$\end{center}\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing delimiter (. inserted).
+<to be read again> 
+                   }
+l.32 ...dot \cos{x}+\sin{x} \cdot \left({-1\right}
+                                                  )$\end{center}\
+I was expecting to see something like `(' or `\{' or
+`\}' here. If you typed, e.g., `{' instead of `\{', you
+should probably delete the `{' by typing `1' now, so that
+braces don't get unbalanced. Otherwise just proceed.
+Acceptable delimiters are characters whose \delcode is
+nonnegative, or you can use `\delimiter <delimiter code>'.
+
+! Extra }, or forgotten $.
+<recently read> }
+                 
+l.32 ...dot \cos{x}+\sin{x} \cdot \left({-1\right}
+                                                  )$\end{center}\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
+
+ []
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.34 ...cdot \cos{x}+\sin{x} \cdot \left({-1\right
+                                                  })$\end{center}\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing delimiter (. inserted).
+<to be read again> 
+                   }
+l.34 ...dot \cos{x}+\sin{x} \cdot \left({-1\right}
+                                                  )$\end{center}\
+I was expecting to see something like `(' or `\{' or
+`\}' here. If you typed, e.g., `{' instead of `\{', you
+should probably delete the `{' by typing `1' now, so that
+braces don't get unbalanced. Otherwise just proceed.
+Acceptable delimiters are characters whose \delcode is
+nonnegative, or you can use `\delimiter <delimiter code>'.
+
+! Extra }, or forgotten $.
+<recently read> }
+                 
+l.34 ...dot \cos{x}+\sin{x} \cdot \left({-1\right}
+                                                  )$\end{center}\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--36
+Underfull \hbox (badness 10000) in paragraph at lines 40--42
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--36
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--41
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--41
+Underfull \hbox (badness 10000) in paragraph at lines 40--42
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 44--46
+! Missing } inserted.
+<inserted text> 
+                }
+l.43 ...cdot \cos{x}+\sin{x} \cdot \left({-1\right
+                                                  })$\end{center}\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing delimiter (. inserted).
+<to be read again> 
+                   }
+l.43 ...dot \cos{x}+\sin{x} \cdot \left({-1\right}
+                                                  )$\end{center}\
+I was expecting to see something like `(' or `\{' or
+`\}' here. If you typed, e.g., `{' instead of `\{', you
+should probably delete the `{' by typing `1' now, so that
+braces don't get unbalanced. Otherwise just proceed.
+Acceptable delimiters are characters whose \delcode is
+nonnegative, or you can use `\delimiter <delimiter code>'.
+
+! Extra }, or forgotten $.
+<recently read> }
+                 
+l.43 ...dot \cos{x}+\sin{x} \cdot \left({-1\right}
+                                                  )$\end{center}\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--47
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--46
+Underfull \hbox (badness 10000) in paragraph at lines 45--47
+
+ []
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.48 ...+x^{2} \cdot \sin{x} \cdot \left({-1\right
+                                                  })+\cos{x} \cdot \left({-1...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing delimiter (. inserted).
+<to be read again> 
+                   }
+l.48 ...x^{2} \cdot \sin{x} \cdot \left({-1\right}
+                                                  )+\cos{x} \cdot \left({-1\...
+I was expecting to see something like `(' or `\{' or
+`\}' here. If you typed, e.g., `{' instead of `\{', you
+should probably delete the `{' by typing `1' now, so that
+braces don't get unbalanced. Otherwise just proceed.
+Acceptable delimiters are characters whose \delcode is
+nonnegative, or you can use `\delimiter <delimiter code>'.
+
+! Extra }, or forgotten $.
+<recently read> }
+                 
+l.48 ...x^{2} \cdot \sin{x} \cdot \left({-1\right}
+                                                  )+\cos{x} \cdot \left({-1\...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.48 ...({-1\right})+\cos{x} \cdot \left({-1\right
+                                                  })$\end{center}\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing delimiter (. inserted).
+<to be read again> 
+                   }
+l.48 ...{-1\right})+\cos{x} \cdot \left({-1\right}
+                                                  )$\end{center}\
+I was expecting to see something like `(' or `\{' or
+`\}' here. If you typed, e.g., `{' instead of `\{', you
+should probably delete the `{' by typing `1' now, so that
+braces don't get unbalanced. Otherwise just proceed.
+Acceptable delimiters are characters whose \delcode is
+nonnegative, or you can use `\delimiter <delimiter code>'.
+
+! Extra }, or forgotten $.
+<recently read> }
+                 
+l.48 ...{-1\right})+\cos{x} \cdot \left({-1\right}
+                                                  )$\end{center}\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--52
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
+Underfull \hbox (badness 10000) in paragraph at lines 50--52
+
+ []
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.53 ...cdot x \cdot \sin{x} \cdot \left({-1\right
+                                                  })+2 \cdot \cos{x}+2 \cdot...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing delimiter (. inserted).
+<to be read again> 
+                   }
+l.53 ...dot x \cdot \sin{x} \cdot \left({-1\right}
+                                                  )+2 \cdot \cos{x}+2 \cdot ...
+I was expecting to see something like `(' or `\{' or
+`\}' here. If you typed, e.g., `{' instead of `\{', you
+should probably delete the `{' by typing `1' now, so that
+braces don't get unbalanced. Otherwise just proceed.
+Acceptable delimiters are characters whose \delcode is
+nonnegative, or you can use `\delimiter <delimiter code>'.
+
+! Extra }, or forgotten $.
+<recently read> }
+                 
+l.53 ...dot x \cdot \sin{x} \cdot \left({-1\right}
+                                                  )+2 \cdot \cos{x}+2 \cdot ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.53 ...cdot x \cdot \sin{x} \cdot \left({-1\right
+                                                  })+2 \cdot x \cdot \sin{x}...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing delimiter (. inserted).
+<to be read again> 
+                   }
+l.53 ...dot x \cdot \sin{x} \cdot \left({-1\right}
+                                                  )+2 \cdot x \cdot \sin{x} ...
+I was expecting to see something like `(' or `\{' or
+`\}' here. If you typed, e.g., `{' instead of `\{', you
+should probably delete the `{' by typing `1' now, so that
+braces don't get unbalanced. Otherwise just proceed.
+Acceptable delimiters are characters whose \delcode is
+nonnegative, or you can use `\delimiter <delimiter code>'.
+
+! Extra }, or forgotten $.
+<recently read> }
+                 
+l.53 ...dot x \cdot \sin{x} \cdot \left({-1\right}
+                                                  )+2 \cdot x \cdot \sin{x} ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.53 ...cdot x \cdot \sin{x} \cdot \left({-1\right
+                                                  })+x^{2} \cdot \cos{x} \cd...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing delimiter (. inserted).
+<to be read again> 
+                   }
+l.53 ...dot x \cdot \sin{x} \cdot \left({-1\right}
+                                                  )+x^{2} \cdot \cos{x} \cdo...
+I was expecting to see something like `(' or `\{' or
+`\}' here. If you typed, e.g., `{' instead of `\{', you
+should probably delete the `{' by typing `1' now, so that
+braces don't get unbalanced. Otherwise just proceed.
+Acceptable delimiters are characters whose \delcode is
+nonnegative, or you can use `\delimiter <delimiter code>'.
+
+! Extra }, or forgotten $.
+<recently read> }
+                 
+l.53 ...dot x \cdot \sin{x} \cdot \left({-1\right}
+                                                  )+x^{2} \cdot \cos{x} \cdo...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.53 ...+x^{2} \cdot \cos{x} \cdot \left({-1\right
+                                                  })+\sin{x} \cdot \left({-1...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing delimiter (. inserted).
+<to be read again> 
+                   }
+l.53 ...x^{2} \cdot \cos{x} \cdot \left({-1\right}
+                                                  )+\sin{x} \cdot \left({-1\...
+I was expecting to see something like `(' or `\{' or
+`\}' here. If you typed, e.g., `{' instead of `\{', you
+should probably delete the `{' by typing `1' now, so that
+braces don't get unbalanced. Otherwise just proceed.
+Acceptable delimiters are characters whose \delcode is
+nonnegative, or you can use `\delimiter <delimiter code>'.
+
+! Extra }, or forgotten $.
+<recently read> }
+                 
+l.53 ...x^{2} \cdot \cos{x} \cdot \left({-1\right}
+                                                  )+\sin{x} \cdot \left({-1\...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.53 ...({-1\right})+\sin{x} \cdot \left({-1\right
+                                                  }) \cdot \left({-1\right})...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing delimiter (. inserted).
+<to be read again> 
+                   }
+l.53 ...{-1\right})+\sin{x} \cdot \left({-1\right}
+                                                  ) \cdot \left({-1\right})$...
+I was expecting to see something like `(' or `\{' or
+`\}' here. If you typed, e.g., `{' instead of `\{', you
+should probably delete the `{' by typing `1' now, so that
+braces don't get unbalanced. Otherwise just proceed.
+Acceptable delimiters are characters whose \delcode is
+nonnegative, or you can use `\delimiter <delimiter code>'.
+
+! Extra }, or forgotten $.
+<recently read> }
+                 
+l.53 ...{-1\right})+\sin{x} \cdot \left({-1\right}
+                                                  ) \cdot \left({-1\right})$...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.53 ...ot \left({-1\right}) \cdot \left({-1\right
+                                                  })$\end{center}\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing delimiter (. inserted).
+<to be read again> 
+                   }
+l.53 ...t \left({-1\right}) \cdot \left({-1\right}
+                                                  )$\end{center}\
+I was expecting to see something like `(' or `\{' or
+`\}' here. If you typed, e.g., `{' instead of `\{', you
+should probably delete the `{' by typing `1' now, so that
+braces don't get unbalanced. Otherwise just proceed.
+Acceptable delimiters are characters whose \delcode is
+nonnegative, or you can use `\delimiter <delimiter code>'.
+
+! Extra }, or forgotten $.
+<recently read> }
+                 
+l.53 ...t \left({-1\right}) \cdot \left({-1\right}
+                                                  )$\end{center}\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
 
-<plot.png, id=18, 462.528pt x 346.896pt>
+[3]
+<plot.png, id=21, 462.528pt x 346.896pt>
 File: plot.png Graphic file (type png)
 <use plot.png>
-Package pdftex.def Info: plot.png  used on input line 54.
-(pdftex.def)             Requested size: 370.02289pt x 277.51717pt.
-[3] [4 <./plot.png>] (out.aux)
+Package pdftex.def Info: plot.png  used on input line 61.
+(pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
+<difference.png, id=23, 462.528pt x 346.896pt>
+File: difference.png Graphic file (type png)
+<use difference.png>
+Package pdftex.def Info: difference.png  used on input line 63.
+(pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
+[4 <./plot.png>]
+<Petrovich.jpg, id=30, 1821.80624pt x 1049.9225pt>
+File: Petrovich.jpg Graphic file (type jpg)
+<use Petrovich.jpg>
+Package pdftex.def Info: Petrovich.jpg  used on input line 64.
+(pdftex.def)             Requested size: 364.3548pt x 209.98077pt.
+[5 <./difference.png> <./Petrovich.jpg>] (out.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -445,27 +876,29 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 6228 strings out of 475247
- 100419 string characters out of 5757792
- 1922785 words of memory out of 5000000
- 27671 multiletter control sequences out of 15000+600000
- 569445 words of font info for 66 fonts, out of 8000000 for 9000
+ 6244 strings out of 475247
+ 100729 string characters out of 5757792
+ 1926785 words of memory out of 5000000
+ 27686 multiletter control sequences out of 15000+600000
+ 570263 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,6n,93p,333b,738s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\mnmnm\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm14
+ 84i,6n,93p,401b,738s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\mnmnm\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx14
 40.pk> <C:\Users\mnmnm\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\la
-bx1728.pk> <C:\Users\mnmnm\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi60
-0\labx2074.pk> <C:\Users\mnmnm\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/d
-pi600\larm1728.pk> <C:\Users\mnmnm\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t
-2a/dpi600\labx2488.pk><C:/Users/mnmnm/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmex10.pfb><C:/Users/mnmnm/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/mnmnm/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mnmnm/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mnmnm/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on out.pdf (4 pages, 120699 bytes).
+rm1440.pk> <C:\Users\mnmnm\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi60
+0\labx1728.pk> <C:\Users\mnmnm\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/d
+pi600\labx2074.pk> <C:\Users\mnmnm\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t
+2a/dpi600\larm1728.pk> <C:\Users\mnmnm\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/
+lh-t2a/dpi600\labx2488.pk><C:/Users/mnmnm/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmex10.pfb><C:/Users/mnmnm/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/mnmnm/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/mnmnm/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mnmnm/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/
+mnmnm/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on out.pdf (5 pages, 586976 bytes).
 PDF statistics:
- 196 PDF objects out of 1000 (max. 8388607)
+ 246 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

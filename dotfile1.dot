@@ -1,16 +1,42 @@
 digraph struct {bgcolor=RosyBrown rankdir = HR
 
 
-label = "tree_dump from function int main(), Tree/src/main.cpp:61";
-node0[shape=record, style=filled, fillcolor="red", label=" {ADDRESS: 00690E40 | DATA: + | PARENT: 00000000 | LEFT: 00690F08 | RIGHT: 00690F30}"];
+label = "tree_dump from function int main(), Tree/src/main.cpp:59";
+node0[shape=record, style=filled, fillcolor="red", label=" {ADDRESS: 00BD11B8 | DATA: + | PARENT: 00000000 | LEFT: 00BD12D0 | RIGHT: 00BD1050}"];
 node0->node1 [color = "lime"];
-node1[shape=record, style=filled, fillcolor="lime", label=" {ADDRESS: 00690F08 | DATA: * | PARENT: 00690E40 | LEFT: 00690EE0 | RIGHT: 00690E90}"];
+node1[shape=record, style=filled, fillcolor="lime", label=" {ADDRESS: 00BD12D0 | DATA: + | PARENT: 00BD11B8 | LEFT: 00BD1190 | RIGHT: 00BD12A8}"];
 node1->node2 [color = "lime"];
-node2[shape=record, style=filled, fillcolor="lime", label=" {ADDRESS: 00690EE0 | DATA: 2.000000 | PARENT: 00690F08 | LEFT: 00000000 | RIGHT: 00000000}"];
-node1->node3 [color = "aqua"];
-node3[shape=record, style=filled, fillcolor="aqua", label=" {ADDRESS: 00690E90 | DATA: x | PARENT: 00690EB8 | LEFT: 00000000 | RIGHT: 00000000}"];
-node0->node4 [color = "aqua"];
-node4[shape=record, style=filled, fillcolor="aqua", label=" {ADDRESS: 00690F30 | DATA: 2.000000 | PARENT: 00690E40 | LEFT: 00000000 | RIGHT: 00000000}"];
+node2[shape=record, style=filled, fillcolor="lime", label=" {ADDRESS: 00BD1190 | DATA: * | PARENT: 00BD12D0 | LEFT: 00BD1320 | RIGHT: 00BD11E0}"];
+node2->node3 [color = "lime"];
+node3[shape=record, style=filled, fillcolor="lime", label=" {ADDRESS: 00BD1320 | DATA: * | PARENT: 00BD1190 | LEFT: 00BD13E8 | RIGHT: 00BD1258}"];
+node3->node4 [color = "lime"];
+node4[shape=record, style=filled, fillcolor="lime", label=" {ADDRESS: 00BD13E8 | DATA: 2.000000 | PARENT: 00BD1320 | LEFT: 00000000 | RIGHT: 00000000}"];
+node3->node5 [color = "aqua"];
+node5[shape=record, style=filled, fillcolor="aqua", label=" {ADDRESS: 00BD1258 | DATA: x | PARENT: 00BD1168 | LEFT: 00000000 | RIGHT: 00000000}"];
+node2->node6 [color = "aqua"];
+node6[shape=record, style=filled, fillcolor="aqua", label=" {ADDRESS: 00BD11E0 | DATA: sin | PARENT: 00BD1190 | LEFT: 00000000 | RIGHT: 00BD1208}"];
+node6->node7 [color = "aqua"];
+node7[shape=record, style=filled, fillcolor="aqua", label=" {ADDRESS: 00BD1208 | DATA: x | PARENT: 00000000 | LEFT: 00000000 | RIGHT: 00000000}"];
+node1->node8 [color = "aqua"];
+node8[shape=record, style=filled, fillcolor="aqua", label=" {ADDRESS: 00BD12A8 | DATA: * | PARENT: 00BD12D0 | LEFT: 00BD1370 | RIGHT: 00BD10A0}"];
+node8->node9 [color = "lime"];
+node9[shape=record, style=filled, fillcolor="lime", label=" {ADDRESS: 00BD1370 | DATA: ^ | PARENT: 00BD12A8 | LEFT: 00BD1280 | RIGHT: 00BD1118}"];
+node9->node10 [color = "lime"];
+node10[shape=record, style=filled, fillcolor="lime", label=" {ADDRESS: 00BD1280 | DATA: x | PARENT: 00000000 | LEFT: 00000000 | RIGHT: 00000000}"];
+node9->node11 [color = "aqua"];
+node11[shape=record, style=filled, fillcolor="aqua", label=" {ADDRESS: 00BD1118 | DATA: 2.000000 | PARENT: 00000000 | LEFT: 00000000 | RIGHT: 00000000}"];
+node8->node12 [color = "aqua"];
+node12[shape=record, style=filled, fillcolor="aqua", label=" {ADDRESS: 00BD10A0 | DATA: cos | PARENT: 00BD12A8 | LEFT: 00000000 | RIGHT: 00BD12F8}"];
+node12->node13 [color = "aqua"];
+node13[shape=record, style=filled, fillcolor="aqua", label=" {ADDRESS: 00BD12F8 | DATA: x | PARENT: 00BD10A0 | LEFT: 00000000 | RIGHT: 00000000}"];
+node0->node14 [color = "aqua"];
+node14[shape=record, style=filled, fillcolor="aqua", label=" {ADDRESS: 00BD1050 | DATA: * | PARENT: 00BD11B8 | LEFT: 00BD1000 | RIGHT: 00BD0F88}"];
+node14->node15 [color = "lime"];
+node15[shape=record, style=filled, fillcolor="lime", label=" {ADDRESS: 00BD1000 | DATA: sin | PARENT: 00BD1028 | LEFT: 00000000 | RIGHT: 00BD0FD8}"];
+node15->node16 [color = "aqua"];
+node16[shape=record, style=filled, fillcolor="aqua", label=" {ADDRESS: 00BD0FD8 | DATA: x | PARENT: 00BD1000 | LEFT: 00000000 | RIGHT: 00000000}"];
+node14->node17 [color = "aqua"];
+node17[shape=record, style=filled, fillcolor="aqua", label=" {ADDRESS: 00BD0F88 | DATA: -1.000000 | PARENT: 00BD1050 | LEFT: 00000000 | RIGHT: 00000000}"];
 
 
 }

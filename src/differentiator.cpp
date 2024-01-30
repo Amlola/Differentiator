@@ -174,25 +174,19 @@ bool ContainsVar(Node* node)
     bool right = false;
 
     if (TYPE == VAR) 
-        {
         return true;
-        }
 
     if (TYPE == NUM) 
-        {
         return false;
-        }
     
     if (LEFT)
-        left = ContainsVar(LEFT);
+        left  = ContainsVar(LEFT);
 
     if (RIGHT)
         right = ContainsVar(RIGHT);
 
     if (left || right) 
-        {
         return true;
-        }
 
     return false;
     }
@@ -282,49 +276,59 @@ void GiveAnswerTaylor(Tree_type x, char variable[MAX_VARIABLE_LEN], Tree_type ta
 
     print_("f\\left(%s\\right) = ", variable);
 
+    FILE* input = fopen("input.txt", "r");
+
+    char formula[MAX_TOKENS] = "";
+
+    fread(formula, sizeof(char), MAX_TOKENS, input);
+
+    fclose(input);
+
+    FILE* input_taylor = fopen("input_taylor.txt", "w");
+
+    fprintf(input_taylor ,"%s\n", formula);
+
     size_t j = 0;
 
     while (j <= 3) 
         {
         if (CmpDouble(taylor_coeffs[j], 0) == 0) 
             {
-            j++;
-            continue;
             }
         
-        if (j == 0) 
+        else if (j == 0) 
             {
-            if (CmpDouble(taylor_coeffs[j], (int)taylor_coeffs[j]) == 0)
-                print_("\\frac{%d}{%d} + ", (int)taylor_coeffs[j], factorial(j));
-
-            else
-                print_("\\frac{%lf}{%d} + ", taylor_coeffs[j], factorial(j));
-
-            j++;
-            continue;
+            print_("\\frac{%lg}{%d} + ", taylor_coeffs[j], factorial(j));
             }
         
 
-        if (CmpDouble(x, 0) == 0)
+        else if (CmpDouble(x, 0) == 0)
             {
-            if (CmpDouble(taylor_coeffs[j], (int)taylor_coeffs[j]) == 0)
-                print_("\\frac{%d}{%d} \\cdot{(%s)^{%d}} + ", (int)taylor_coeffs[j], factorial(j), variable, j);
-
-            else
-                print_("\\frac{%lf}{%d} \\cdot{(%s)^{%d}} + ", taylor_coeffs[j], factorial(j), variable, j);
+            print_("\\frac{%lg}{%d} \\cdot{(%s)^{%d}} + ", taylor_coeffs[j], factorial(j), variable, j);
             }
 
         else
             {
-             if (CmpDouble(taylor_coeffs[j], (int)taylor_coeffs[j]) == 0)
-                print_("\\frac{%d}{%d} \\cdot{(%s - %d)^{%d}} + ", (int)taylor_coeffs[j], factorial(j), variable, (int)x, j);
-
-            else
-                print_("\\frac{%lf}{%d} \\cdot{(%s - %d)^{%d}} + ", taylor_coeffs[j], factorial(j), variable, (int)x, j);
+            print_("\\frac{%lg}{%d} \\cdot{(%s - %d)^{%d}} + ", taylor_coeffs[j], factorial(j), variable, (int)x, j);
             }
-        
+
+        for (size_t i = 0; i <= j; i++) 
+            {
+            if (CmpDouble(x, 0) == 0)
+                {
+                fprintf(input, "%lg * %s**%d\n", taylor_coeffs[i] / factorial(i), variable, i);
+                }
+
+            else 
+                {
+                fprintf(input, "%lg * (%s - %d)**%d\n", taylor_coeffs[i] / factorial(i), variable, int(x), i); 
+                }
+            }
+
         j++;
         }
+    
+    fclose(input);
     
     if (CmpDouble(x, 0) == 0) 
         print_("o(%s^{3})", variable, (int)x);
@@ -387,7 +391,7 @@ void DumpNode(Node* node, Node* root, char Variables[MAX_COUNT_VARIABLE][MAX_VAR
     if (TYPE == NUM)
         {
         if (CmpDouble(DATA.num, 0) < 0) 
-            print_("\\left(");
+            print_("\\left({");
 
         if (CmpDouble((int)DATA.num, DATA.num) == 0) 
             {
@@ -398,7 +402,7 @@ void DumpNode(Node* node, Node* root, char Variables[MAX_COUNT_VARIABLE][MAX_VAR
             print_("%lf", DATA.num);
 
         if (CmpDouble(DATA.num, 0) < 0) 
-            print_("\\right)");
+            print_("\\right})");
         }
 
     if (TYPE == VAR) 
@@ -412,9 +416,9 @@ void DumpNode(Node* node, Node* root, char Variables[MAX_COUNT_VARIABLE][MAX_VAR
                 {
                 if (PARENT->data.op == SIN || PARENT->data.op == COS || PARENT->data.op == LN || PARENT->data.op == CTG || PARENT->data.op == TG) 
                     {
-                    print_("\\left(");
+                    print_("{\\left(");
                     GetRight(node, root, Variables);
-                    print_("\\right)");
+                    print_("\\right)}");
                     }
 
                 else 
@@ -474,13 +478,11 @@ void DumpNode(Node* node, Node* root, char Variables[MAX_COUNT_VARIABLE][MAX_VAR
 
             print_("%s", OperationArray[DATA.op - 1].op_char_name);
 
-            if (RIGHT->type == OP) 
-                print_("{\\left(");
+            print_("{");
 
             DumpNode(RIGHT, root, Variables);
 
-            if (RIGHT->type == OP) 
-                print_("\\right)}");
+            print_("}");
             }
 
         else 
@@ -489,11 +491,11 @@ void DumpNode(Node* node, Node* root, char Variables[MAX_COUNT_VARIABLE][MAX_VAR
                 {
                 if (!ContainsOnlyOneOp(node, root))
                     {
-                    print_("\\left(");
+                    print_("{\\left(");
 
                     GetLeftAndRight(node, root, Variables);
 
-                    print_("\\right)");
+                    print_("\\right)}");
                     }
             
                 else 
@@ -619,9 +621,23 @@ int TexDestroy()
 
     print_("\\section{Построение графика исходной функции}");
 
-    print_("\\ Используя данные, полученные в пунктах 1 и 2, получаем график:\n");
+    system("python graphic.py");
 
-    print_("\\begin{center} \\includegraphics[scale=0.8]{plot.png} \\end{center}\n");
+    print_("\\ Используя данные, полученные в пунктах 1 и 2, получаем графики:\\\n");
+
+    print_("\\subsection{Графики *членов:) Тейлора}\n");
+
+    print_("\\begin{center} \\includegraphics[scale=0.6]{plot.png} \\end{center}\n");
+
+    print_("\\textbf{* Разложения... Ну вы поняли)))}");
+
+    print_("\\subsection{Графики разностей}\n");
+
+    print_("\\begin{center} \\includegraphics[scale=0.6]{difference.png} \\end{center}\n");
+
+    print_("\\section{Вывод}");
+
+    print_("\\begin{center} \\includegraphics[scale=0.2]{Petrovich.jpg} \\end{center}\n");
 
     print_("\\end{document}");
 

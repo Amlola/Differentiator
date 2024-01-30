@@ -2,9 +2,7 @@
 
 
 int main() 
-    {
-    system("python ../graphic.py");
-
+    {    
     Tree tree = {};
 
     TreeCtor(&tree);

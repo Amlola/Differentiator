@@ -61,6 +61,9 @@ void GetLeftAndRightMult(Node* node, Node* root, char Variables[MAX_COUNT_VARIAB
 
 void GetRight(Node* node, Node* root, char Variables[MAX_COUNT_VARIABLE][MAX_VARIABLE_LEN]); 
 
+int SkipSpaces(Text* data, size_t i);
+
+
 const char* const PHRAZES[] =
     {
     "Поэтому в силу непрерывности функции: \\\\ \n",
